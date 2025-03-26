@@ -31,4 +31,6 @@ function draw() {
   rect(330, 210, 60, 100);
   fill("#e3fafa");
   circle(360, 240, 24);
+  fill("#cfcfcf");
+  circle(378, 268, 10);
 }
