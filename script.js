@@ -15,6 +15,28 @@ function setup() {
 function draw() {
   // sky
   background("#7edbed");
+  // sun
+  fill("yellow");
+  stroke("#fcc705");
+  circle(sunX, sunY, sunD);
+  // rays
+  translate(sunX, sunY);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(45);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(90);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(135);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(180);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(225);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(270);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(315);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  resetMatrix();
   // grass
   fill("#28c752");
   stroke("#168a35");
@@ -60,30 +82,7 @@ function draw() {
   // window lines
   line(450, 200, 450, 250);
 
-  // sun
-  fill("yellow");
-  stroke("#fcc705");
-  circle(sunX, sunY, sunD);
-  // rays
-  translate(sunX, sunY);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(45);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(90);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(135);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(180);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(225);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(270);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-  rotate(315);
-  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
-
   // tree trunk
-  resetMatrix();
   stroke("#664401");
   fill("#664401");
   rect(650, 200, 30, 150);
@@ -94,5 +93,4 @@ function draw() {
   ellipse(630, 170, 150, 80);
   ellipse(710, 190, 120, 80);
   ellipse(680, 120, 160, 100);
-
 }
