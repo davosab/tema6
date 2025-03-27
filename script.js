@@ -82,5 +82,17 @@ function draw() {
   rotate(315);
   triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
 
+  // tree trunk
+  resetMatrix();
+  stroke("#664401");
+  fill("#664401");
+  rect(650, 200, 30, 150);
+  triangle(640, 350, 690, 350, 665, 250);
+  // leaves
+  fill("#0b6101");
+  stroke("#0b6101");
+  ellipse(630, 170, 150, 80);
+  ellipse(710, 190, 120, 80);
+  ellipse(680, 120, 160, 100);
 
 }
