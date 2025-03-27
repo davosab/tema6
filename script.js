@@ -29,10 +29,10 @@ function draw() {
   // door
   fill("white");
   rect(330, 210, 60, 100);
-  // window
+  // door window
   fill("#e3fafa");
   circle(360, 240, 24);
-  // window lines
+  // door window lines
   beginShape(LINES);
 
   vertex(348, 240);
@@ -47,4 +47,12 @@ function draw() {
   // window
   fill("#e3fafa");
   rect(420, 200, 60, 50);
+  // window lines
+  beginShape(LINES);
+
+  vertex(450, 200);
+  vertex(450, 250);
+
+  endShape();
+
 }
