@@ -1,3 +1,7 @@
+let sunX = 100;
+let sunY = 100;
+let sunD = 80;
+
 function setup() {
   createCanvas(800, 400);
 }
@@ -54,5 +58,10 @@ function draw() {
   vertex(450, 250);
 
   endShape();
+
+  // sun
+  fill("yellow");
+  stroke("#fcc705");
+  circle(sunX, sunY, sunD);
 
 }
