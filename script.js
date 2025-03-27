@@ -29,8 +29,22 @@ function draw() {
   // door
   fill("white");
   rect(330, 210, 60, 100);
+  // window
   fill("#e3fafa");
   circle(360, 240, 24);
+  // window lines
+  beginShape(LINES);
+
+  vertex(348, 240);
+  vertex(372, 240);
+  vertex(360, 228);
+  vertex(360, 252);
+
+  endShape();
+  // knob
   fill("#cfcfcf");
   circle(378, 268, 10);
+  // window
+  fill("#e3fafa");
+  rect(420, 200, 60, 50);
 }
