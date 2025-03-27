@@ -1,9 +1,15 @@
 let sunX = 100;
 let sunY = 100;
 let sunD = 80;
+let sunR = sunD/2;
+let sunGap = 8;
+
+let triBase = 20;
+let triHeight = 30;
 
 function setup() {
   createCanvas(800, 400);
+  angleMode(DEGREES);
 }
 
 function draw() {
@@ -52,16 +58,29 @@ function draw() {
   fill("#e3fafa");
   rect(420, 200, 60, 50);
   // window lines
-  beginShape(LINES);
-
-  vertex(450, 200);
-  vertex(450, 250);
-
-  endShape();
+  line(450, 200, 450, 250);
 
   // sun
   fill("yellow");
   stroke("#fcc705");
   circle(sunX, sunY, sunD);
+  // rays
+  translate(sunX, sunY);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(45);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(90);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(135);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(180);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(225);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(270);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+  rotate(315);
+  triangle(sunR + sunGap, -triBase/2, sunR + sunGap, triBase/2, sunR + sunGap + triHeight, 0);
+
 
 }
